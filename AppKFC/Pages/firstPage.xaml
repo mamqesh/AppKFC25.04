@@ -1,0 +1,21 @@
+﻿<Page x:Class="AppKFC.Pages.firstPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppKFC.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="firstPage" Background="White">
+
+    <Grid>
+        <Image Margin="1148,0,0,0" Source="/AppKFC;component/1636123659_4-papik-pro-p-kfc-logotip-foto-4.jpg" Stretch="Fill"/>
+        <Button Content="СДЕЛАТЬ ЗАКАЗ" HorizontalAlignment="Right" Margin="0,820,1429,0" VerticalAlignment="Top" Width="333" Height="84" FontSize="30" 
+                Background="Red" Click="Button_Click" BorderBrush="Black"/>
+        <Button Content="Я ПОВАР" HorizontalAlignment="Right" Margin="0,928,1429,0" VerticalAlignment="Top" Width="333" Height="84" FontSize="30" 
+                Background="Red" Click="Button_Click1" BorderBrush="Black"/>
+        <Button Content="ВЫХОД" HorizontalAlignment="Right" Margin="0,39,1596,0" VerticalAlignment="Top" Width="280" Height="64" FontSize="30" 
+            Background="Red" Click="Button_Click2" BorderBrush="Black" Cursor="Hand"/>
+
+    </Grid>
+</Page>

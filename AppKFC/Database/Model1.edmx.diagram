@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71c156fbfe134a42b364f237438a2f40" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="danilModel.Client" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.Dish" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.DishCompound" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.Employee" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.Ingredient" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.OrderCompound" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="danilModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="danilModel.FK__Order__Client__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="danilModel.FK__DishCompou__Dish__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="danilModel.FK__OrderCompo__Dish__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="danilModel.FK__DishCompo__Ingre__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="danilModel.FK__Order__Employee__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="danilModel.FK__OrderComp__Order__571DF1D5" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="danilModel.Role" Width="1.5" PointX="0.75" PointY="8.625" FillColor="DeepSkyBlue" />
+        <AssociationConnector Association="danilModel.FK__Employee__Role__66603565" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

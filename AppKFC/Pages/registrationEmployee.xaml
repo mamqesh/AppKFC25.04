@@ -1,0 +1,23 @@
+﻿<Page x:Class="AppKFC.Pages.registrationEmployee"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppKFC.Pages"
+      mc:Ignorable="d" 
+       d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="registrationEmployee" Background="White">
+    <Grid>
+        <Button Content="РЕГИСТРАЦИЯ" HorizontalAlignment="Left" Margin="580,946,0,0" VerticalAlignment="Top" Width="550" Height="100" FontSize="40" Background="Red" BorderBrush="Black" FontWeight="Bold"  Cursor="Hand" Click="Button_Click"/>
+        <TextBox Name="textBoxPhone" materialDesign:HintAssist.Hint="Введите номер телефона" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,791" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000"/>
+        <TextBox Name="textBoxName" materialDesign:HintAssist.Hint="Введите имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,667" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
+        <TextBox Name="textBoxSurname" materialDesign:HintAssist.Hint="Введите фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,543" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
+        <TextBox Name="textBoxPatronymic" materialDesign:HintAssist.Hint="Введите отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,415" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
+        <PasswordBox Name="passwordBoxEmployee" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,167" VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
+        <ComboBox Name="comboBoxLoadRole" FontSize="35" materialDesign:HintAssist.Hint="Выберите роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}" HorizontalAlignment="Left" Margin="130,670,0,0" VerticalAlignment="Top" Width="538" Height="94"/>
+        <Image Margin="1164,0,0,0" Source="/AppKFC;component/1636123659_4-papik-pro-p-kfc-logotip-foto-4.jpg" Stretch="Fill"/>
+        <Label Content="РЕГИСТРАЦИЯ АДМИНКИ" FontSize="40" FontWeight="Bold" HorizontalAlignment="Left" Margin="449,69,0,0" VerticalAlignment="Top"/>
+        <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="130,76,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_1"/>
+    </Grid>
+</Page>

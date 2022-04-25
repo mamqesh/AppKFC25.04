@@ -1,0 +1,41 @@
+﻿<Page x:Class="AppKFC.Pages.loginPageClient"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppKFC.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="loginPageClient">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="73*"/>
+                <ColumnDefinition Width="247*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+
+
+            <Image Source="/1636123661_5-papik-pro-p-kfc-logotip-foto-5 (1).jpg" Stretch="Fill" HorizontalAlignment="Left" Width="1920" Height="1080" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Button Content="ВОЙТИ" Background="#FFE80808" HorizontalAlignment="Right" Margin="0,379,82,0" VerticalAlignment="Top" 
+                        Height="63" Width="320" BorderBrush="Black" FontWeight="Bold" FontSize="20" Cursor="Hand" FontFamily="Yu Gothic UI Semibold" Grid.Row="1" Click="Button_Click"/>
+            <TextBox Name="textBoxLogin"  HorizontalAlignment="Right" Margin="0,38,10,0" TextWrapping="Wrap" Text="" 
+                         VerticalAlignment="Top" Width="392" Height="70" FontSize="25" Grid.Row="1" materialDesign:HintAssist.Hint="Логин" 
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="textBoxLogin_TextChanged"/>
+            <Label Content="АВТОРИЗАЦИЯ" FontSize="50"  Margin="823,0,0,500" FontWeight="Bold" FontStyle="Normal" HorizontalAlignment="Left" 
+               Width="400" Height="65" VerticalAlignment="Bottom" Grid.Column="1" Foreground="White"/>
+            <TextBox Name="textBoxCode"  HorizontalAlignment="Right" Margin="0,172,10,0" TextWrapping="Wrap" 
+                VerticalAlignment="Top" Width="392" Height="70" FontSize="25" Grid.Row="1" materialDesign:HintAssist.Hint="СМС-код" 
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <Button Content="РЕГИСТРАЦИЯ" Background="#FFE80808" HorizontalAlignment="Right" Margin="0,306,82,0" VerticalAlignment="Top" 
+                Height="48" Width="319" BorderBrush="Black" FontWeight="Bold" FontSize="20" Cursor="Hand" FontFamily="Yu Gothic UI Semibold" Grid.Row="1" Click="Button_Click2"/>
+            <Button Content="НАЗАД" Background="#FFE80808" HorizontalAlignment="Right" Margin="0,68,248,0" VerticalAlignment="Top" 
+                Height="48" Width="153" BorderBrush="Black" FontWeight="Bold" FontSize="20" Cursor="Hand" FontFamily="Yu Gothic UI Semibold" Click="Button_Click3"/>
+        </Grid>
+    </Grid>
+</Page>

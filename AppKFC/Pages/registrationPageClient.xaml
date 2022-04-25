@@ -1,0 +1,25 @@
+﻿<Page x:Class="AppKFC.Pages.registrationPageClient"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppKFC.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="registrationPageClient" Background="White">
+    <Grid>
+        <Button Content="РЕГИСТРАЦИЯ" HorizontalAlignment="Left" Margin="507,950,0,0" VerticalAlignment="Top" Width="550" Height="100" FontSize="40" Background="Red" BorderBrush="Black" FontWeight="Bold" Click="Button_Click" Cursor="Hand"/>
+        <TextBox Name="textBoxPhone" materialDesign:HintAssist.Hint="Введите номер телефона" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,791" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000"/>
+        <TextBox Name="textBoxName" materialDesign:HintAssist.Hint="Введите имя, фамилию и отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,667" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
+        <TextBox Name="textBoxAddress" materialDesign:HintAssist.Hint="Введите страну, город, улицу, дом, квартиру" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,541" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000"/>
+        <TextBox materialDesign:HintAssist.Hint="Откуда узнали о нас?" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,419" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
+        <Image Margin="1164,0,0,0" Source="/AppKFC;component/1636123659_4-papik-pro-p-kfc-logotip-foto-4.jpg" Stretch="Fill"/>
+        <TextBox materialDesign:HintAssist.Hint="СМС-код" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,1366,290" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="424"/>
+        <Button Content="ОТПРАВИТЬ СМС-код" HorizontalAlignment="Left" Margin="130,950,0,0" VerticalAlignment="Top" Width="356" Height="100" FontSize="25" FontWeight="Bold" Background="Red" BorderBrush="Black"/>
+        <Label Content="Регистрация нового пользователя" FontSize="40" FontWeight="Bold" HorizontalAlignment="Left" Margin="449,69,0,0" VerticalAlignment="Top"/>
+        <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="130,76,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black" Click="Button_Click_1" Cursor="Hand"/>
+
+
+    </Grid>
+</Page>
