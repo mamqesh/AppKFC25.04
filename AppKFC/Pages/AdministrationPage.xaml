@@ -1,0 +1,73 @@
+﻿<Page x:Class="AppKFC.Pages.AdministrationPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppKFC.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AdministrationPage" Background="White">
+
+    <Grid>
+
+    
+
+        <TabControl HorizontalAlignment="Left" FontSize="25" Height="1080" VerticalAlignment="Top" Width="1920" Style="{StaticResource MaterialDesignNavigatilRailTabControl}">
+            <TabItem Header="Сотрудники" Width="108" FontSize="25">
+                <Grid Background="White">
+                    <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_1"/>
+                    <TextBox Name="textBoxPhone" Text="{Binding employee.Phone }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,829" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832"/>
+                    <TextBox Name="textBoxName" Text="{Binding employee.Name }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,705" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <TextBox Name="textBoxSurname" Text="{Binding employee.Surname }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,579" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <TextBox Name="textBoxPatronymic" Text="{Binding employee.Patronymic }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,453" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <TextBox Name="textBoxPassword" Text="{Binding employee.Password }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,318" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <ComboBox Name="comboBoxLoadRole" FontSize="35" materialDesign:HintAssist.Hint="Выберите роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}" HorizontalAlignment="Left" Margin="19,789,0,0" VerticalAlignment="Top" Width="538" Height="94">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding Role1}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>   
+                     </ComboBox>
+                        <Button Content="РЕДАКТИРОВАТЬ ДАННЫЕ" HorizontalAlignment="Left" Margin="10,952,0,0" VerticalAlignment="Top" Height="75" Width="360" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click"/>
+                    <ListBox Name="listBoxUsers" HorizontalAlignment="Left" Height="871" Margin="1025,152,0,0" VerticalAlignment="Top" Width="688" SelectionChanged="listBoxUsers_SelectionChanged" FontSize="30">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                        <Run Text="{Binding Surname}"></Run>
+                        <Run Text=" "></Run>
+                        <Run Text="{Binding Name}"></Run>
+                        <Run Text=" "></Run>
+                        <Run Text="{Binding Patronymic}"></Run>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Пользователи" Width="109">
+                <Grid Background="White">
+
+                    <TextBox Name="textBoxPhoneUser" Text="{Binding client.Phone }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,829" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832"/>
+                    <TextBox Name="textBoxNameUser" Text="{Binding client.FullName }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,703" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <TextBox Name="textBoxAddressUser" Text="{Binding client.Address}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="25" HorizontalAlignment="Right" Height="99" Margin="0,0,960,572" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_1"/>
+                    <Button Content="РЕДАКТИРОВАТЬ ДАННЫЕ" HorizontalAlignment="Left" Margin="10,952,0,0" VerticalAlignment="Top" Height="75" Width="360" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click1"/>
+                    <ListBox Name="listBoxClients" HorizontalAlignment="Left" Height="871" Margin="987,152,0,0" VerticalAlignment="Top" Width="688" SelectionChanged="listBoxClients_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                        <Run Text="{Binding FullName}"></Run>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Page>

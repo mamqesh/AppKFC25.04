@@ -27,6 +27,7 @@ namespace AppKFC
         public static Pages.firstPage pageFirstPage;
         public static Pages.loginPageClient pageLoginPageClient;
         public static Pages.registrationEmployee pageRegistrationEmployee;
+        public static Pages.AdministrationPage pageAdministrationPage;
         public static string Name;
         public static MainWindow Instance; 
         public MainWindow()
@@ -40,6 +41,7 @@ namespace AppKFC
             pageRegistrationPageClient = new Pages.registrationPageClient();
             pageFirstPage = new Pages.firstPage();
             pageLoginPageClient = new Pages.loginPageClient();
+            pageAdministrationPage = new Pages.AdministrationPage();
             //MainFrame.Navigate(pageMainPage);
             //MainFrame.Navigate(pageUserPage);
             //MainFrame.Navigate(pageRegistrationPage);

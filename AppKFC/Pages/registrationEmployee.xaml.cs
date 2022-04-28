@@ -117,6 +117,17 @@ namespace AppKFC.Pages
         {
             NavigationService.GoBack();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            textBoxPhone.Clear();
+            textBoxName.Clear();
+            textBoxSurname.Clear();
+            textBoxPatronymic.Clear();
+            passwordBoxEmployee.Clear();
+            comboBoxLoadRole.SelectedIndex = -1;
+            NavigationService.Navigate(MainWindow.pageAdministrationPage);
+        }
     }
 }
 

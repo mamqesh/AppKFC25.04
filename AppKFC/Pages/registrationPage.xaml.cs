@@ -55,8 +55,16 @@ namespace AppKFC.Pages
                 {
                     if (password == _employees.Password)
                     {
-                        NavigationService.Navigate(MainWindow.pageMainPage);
-                        tryExit++;
+                        if (_employees.Role == 2)
+                        {
+                            NavigationService.Navigate(MainWindow.pageMainPage);
+                            tryExit++;
+                        }
+                        if (_employees.Role == 3)
+                        {
+                            NavigationService.Navigate(MainWindow.pageRegistrationEmployee);
+                            tryExit++;
+                        }
                     }
                 }
             }
@@ -70,6 +78,8 @@ namespace AppKFC.Pages
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
+            textBoxLogin.Clear();
+            passwordBoxPassword.Clear();
             NavigationService.Navigate(MainWindow.pageFirstPage);
         }
     }
