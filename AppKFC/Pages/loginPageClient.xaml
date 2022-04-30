@@ -25,7 +25,7 @@
             <Button Content="ВОЙТИ" Background="#FFE80808" HorizontalAlignment="Right" Margin="0,379,82,0" VerticalAlignment="Top" 
                         Height="63" Width="320" BorderBrush="Black" FontWeight="Bold" FontSize="20" Cursor="Hand" FontFamily="Yu Gothic UI Semibold" Grid.Row="1" Click="Button_Click"/>
             <TextBox Name="textBoxLogin"  HorizontalAlignment="Right" Margin="0,38,10,0" TextWrapping="Wrap" Text="" 
-                         VerticalAlignment="Top" Width="392" Height="70" FontSize="25" Grid.Row="1" materialDesign:HintAssist.Hint="Логин" 
+                         VerticalAlignment="Top" Width="392" Height="70" FontSize="25" Grid.Row="1" materialDesign:HintAssist.Hint="Логин (номер телефона)" 
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="textBoxLogin_TextChanged"/>
             <Label Content="АВТОРИЗАЦИЯ" FontSize="50"  Margin="823,0,0,500" FontWeight="Bold" FontStyle="Normal" HorizontalAlignment="Left" 
                Width="400" Height="65" VerticalAlignment="Bottom" Grid.Column="1" Foreground="White"/>

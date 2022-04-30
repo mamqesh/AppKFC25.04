@@ -13,19 +13,19 @@
 
     
 
-        <TabControl HorizontalAlignment="Left" FontSize="25" Height="1080" VerticalAlignment="Top" Width="1920" Style="{StaticResource MaterialDesignNavigatilRailTabControl}">
-            <TabItem Header="Сотрудники" Width="108" FontSize="25">
+        <TabControl HorizontalAlignment="Left" FontSize="25" Height="1080" VerticalAlignment="Top" Width="1920" Style="{StaticResource MaterialDesignNavigatilRailTabControl}" FontWeight="Bold">
+            <TabItem Header="Сотрудники" Width="140" FontSize="30">
                 <Grid Background="White">
                     <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_1"/>
-                    <TextBox Name="textBoxPhone" Text="{Binding employee.Phone }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,829" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832"/>
-                    <TextBox Name="textBoxName" Text="{Binding employee.Name }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,705" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
-                    <TextBox Name="textBoxSurname" Text="{Binding employee.Surname }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,579" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
-                    <TextBox Name="textBoxPatronymic" Text="{Binding employee.Patronymic }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,453" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
-                    <TextBox Name="textBoxPassword" Text="{Binding employee.Password }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,318" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <TextBox Name="textBoxPhone" Text="{Binding employee.Phone }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,929,873" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" FontWeight="Normal"/>
+                    <TextBox Name="textBoxName" Text="{Binding employee.Name }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,929,733" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam" FontWeight="Normal"/>
+                    <TextBox Name="textBoxSurname" Text="{Binding employee.Surname }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,929,601" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam" FontWeight="Normal"/>
+                    <TextBox Name="textBoxPatronymic" Text="{Binding employee.Patronymic }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,929,479" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam" FontWeight="Normal"/>
+                    <TextBox Name="textBoxPassword" Text="{Binding employee.Password }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,929,348" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam" FontWeight="Normal"/>
                     <ComboBox Name="comboBoxLoadRole" FontSize="35" materialDesign:HintAssist.Hint="Выберите роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                              HorizontalAlignment="Left" Margin="19,789,0,0" VerticalAlignment="Top" Width="538" Height="94"
+                              HorizontalAlignment="Left" Margin="19,767,0,0" VerticalAlignment="Top" Width="538" Height="94"
                               ItemsSource="{Binding roles}"
-                              SelectedItem="{Binding employee.Role1}">
+                              SelectedItem="{Binding employee.Role1}" FontWeight="Normal">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock>
@@ -35,7 +35,7 @@
                         </ComboBox.ItemTemplate>   
                      </ComboBox>
                         <Button Content="РЕДАКТИРОВАТЬ ДАННЫЕ" HorizontalAlignment="Left" Margin="10,952,0,0" VerticalAlignment="Top" Height="75" Width="360" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click"/>
-                    <ListBox Name="listBoxUsers" HorizontalAlignment="Left" Height="871" Margin="1025,152,0,0" VerticalAlignment="Top" Width="688" SelectionChanged="listBoxUsers_SelectionChanged" FontSize="30">
+                    <ListBox Name="listBoxUsers" HorizontalAlignment="Left" Height="871" Margin="1025,152,0,0" VerticalAlignment="Top" Width="688" SelectionChanged="listBoxUsers_SelectionChanged" FontSize="30" FontWeight="Normal">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock>
@@ -50,15 +50,15 @@
                     </ListBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Пользователи" Width="109">
+            <TabItem Header="Пользователи" Width="136">
                 <Grid Background="White">
 
-                    <TextBox Name="textBoxPhoneUser" Text="{Binding client.Phone }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,829" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832"/>
-                    <TextBox Name="textBoxNameUser" Text="{Binding client.FullName }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,703" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
-                    <TextBox Name="textBoxAddressUser" Text="{Binding client.Address}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="25" HorizontalAlignment="Right" Height="99" Margin="0,0,960,572" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
+                    <TextBox Name="textBoxPhoneUser" Text="{Binding client.Phone }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,920,829" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" FontWeight="Normal"/>
+                    <TextBox Name="textBoxNameUser" Text="{Binding client.FullName }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,920,695" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam" FontWeight="Normal"/>
+                    <TextBox Name="textBoxAddressUser" Text="{Binding client.Address}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="25" HorizontalAlignment="Right" Height="99" Margin="0,0,920,558" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam" FontWeight="Normal"/>
                     <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_1"/>
                     <Button Content="РЕДАКТИРОВАТЬ ДАННЫЕ" HorizontalAlignment="Left" Margin="10,952,0,0" VerticalAlignment="Top" Height="75" Width="360" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click1"/>
-                    <ListBox Name="listBoxClients" HorizontalAlignment="Left" Height="871" Margin="987,152,0,0" VerticalAlignment="Top" Width="688" SelectionChanged="listBoxClients_SelectionChanged">
+                    <ListBox Name="listBoxClients" HorizontalAlignment="Left" Height="871" Margin="987,152,0,0" VerticalAlignment="Top" Width="688" SelectionChanged="listBoxClients_SelectionChanged" FontWeight="Normal">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock>

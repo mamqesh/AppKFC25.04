@@ -17,7 +17,7 @@
         <PasswordBox Name="passwordBoxEmployee" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,790,167" VerticalAlignment="Bottom" Width="1000" Cursor="IBeam"/>
         <ComboBox Name="comboBoxLoadRole" FontSize="35" materialDesign:HintAssist.Hint="Выберите роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}" HorizontalAlignment="Left" Margin="130,670,0,0" VerticalAlignment="Top" Width="538" Height="94"/>
         <Image Margin="1164,0,0,0" Source="/AppKFC;component/1636123659_4-papik-pro-p-kfc-logotip-foto-4.jpg" Stretch="Fill"/>
-        <Label Content="РЕГИСТРАЦИЯ АДМИНКИ" FontSize="40" FontWeight="Bold" HorizontalAlignment="Left" Margin="449,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="РЕГИСТРАЦИЯ СОТРУДНИКА" FontSize="40" FontWeight="Bold" HorizontalAlignment="Left" Margin="449,69,0,0" VerticalAlignment="Top"/>
         <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="130,76,0,0" VerticalAlignment="Top" Height="48" Width="153" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_1"/>
         <Button Content="ПОЛЬЗОВАТЕЛИ" HorizontalAlignment="Left" Margin="648,950,0,0" VerticalAlignment="Top" Width="462" Height="100" FontSize="40" Background="Red" BorderBrush="Black" FontWeight="Bold"  Cursor="Hand" Click="Button_Click_2"/>
     </Grid>
