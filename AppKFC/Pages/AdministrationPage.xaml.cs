@@ -23,12 +23,13 @@ namespace AppKFC.Pages
     {
         public Database.Employee employee { get; set; }
         public List <Database.Employee> employees { get; set; } 
-
         public Database.Client client { get; set; }
         public List <Database.Client> clients { get; set; }
-
+        public Database.Role role { get; set; }
+        public List <Database.Role> roles { get; set; }
+        
         danilEntities connection = new danilEntities();
-
+        
         public AdministrationPage()
         {
             InitializeComponent();
@@ -69,7 +70,11 @@ namespace AppKFC.Pages
             textBoxPatronymic.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
             textBoxPhone.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
             textBoxPassword.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
-            //comboBoxLoadRole.GetBindingExpression(ComboBox.SelectedItemProperty).UpdateTarget();
+            var roles = comboBoxLoadRole.GetBindingExpression(ComboBox.SelectedItemProperty);
+            if (roles != null)
+            {
+                roles.UpdateTarget();
+            }
         }
         void LoadUsers()
         {
@@ -103,6 +108,7 @@ namespace AppKFC.Pages
         }
         private void listBoxUsers_SelectionChanged(object sender, SelectionChangedEventArgs e) //СОТРУДНИКИ
         {
+
             employee = listBoxUsers.SelectedItem as Database.Employee;
             LoadUsersEmployee();
         }

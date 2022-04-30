@@ -22,7 +22,10 @@
                     <TextBox Name="textBoxSurname" Text="{Binding employee.Surname }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,579" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
                     <TextBox Name="textBoxPatronymic" Text="{Binding employee.Patronymic }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,453" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
                     <TextBox Name="textBoxPassword" Text="{Binding employee.Password }" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="35" HorizontalAlignment="Right" Height="99" Margin="0,0,960,318" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="832" Cursor="IBeam"/>
-                    <ComboBox Name="comboBoxLoadRole" FontSize="35" materialDesign:HintAssist.Hint="Выберите роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}" HorizontalAlignment="Left" Margin="19,789,0,0" VerticalAlignment="Top" Width="538" Height="94">
+                    <ComboBox Name="comboBoxLoadRole" FontSize="35" materialDesign:HintAssist.Hint="Выберите роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                              HorizontalAlignment="Left" Margin="19,789,0,0" VerticalAlignment="Top" Width="538" Height="94"
+                              ItemsSource="{Binding roles}"
+                              SelectedItem="{Binding employee.Role1}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock>
