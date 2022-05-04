@@ -58,9 +58,12 @@ namespace AppKFC.Pages
             textBoxNameUser.Clear();
             textBoxPhoneUser.Clear();
             textBoxAddressUser.Clear();
+            listBoxClients.SelectedIndex = -1;
+            listBoxUsers.SelectedIndex = -1;
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)//НАЗАД
         {
+            ClearTextBox();
             NavigationService.GoBack();
         }
         void LoadUsersEmployee()
