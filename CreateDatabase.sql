@@ -1,10 +1,11 @@
 Use danil
 GO
+--fesaka1670@bunlets.com
 CREATE TABLE [Client] (
 	Phone nvarchar(20) PRIMARY KEY NOT NULL,
 	FullName nvarchar(200) NOT NULL,
 	[Address] nvarchar(200) NOT NULL,
-
+	[Status] nvarchar(20) NOT NULL
 )
 GO
 
@@ -21,6 +22,7 @@ CREATE TABLE [Employee] (
 	[Name] nvarchar(32) NOT NULL,
 	Surname nvarchar(32) NOT NULL,
 	Patronymic nvarchar(32) NOT NULL,
+	[Status] nvarchar(15) NOT NULL,
 	Foreign key ([Role]) references [Role](IDRole)
 )
 GO

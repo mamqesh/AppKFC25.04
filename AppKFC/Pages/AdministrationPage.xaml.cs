@@ -120,5 +120,16 @@ namespace AppKFC.Pages
             client = listBoxClients.SelectedItem as Database.Client;
             LoadUsers();
         }
+        private void Button_Click_3(object sender, RoutedEventArgs e) //УДАЛИТЬ СОТРУДНИКА
+        {     
+            
+            //listBoxUsers.SelectedItem
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e) //УДАЛИТЬ ПОЛЬЗОВАТЕЛЯ
+        {
+
+        }
+
+       
     }
 }

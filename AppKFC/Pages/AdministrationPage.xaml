@@ -48,6 +48,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
+                    <Button Content="УДАЛИТЬ СОТРУДНИКА" HorizontalAlignment="Left" Margin="392,948,0,0" VerticalAlignment="Top" Height="75" Width="360" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_3" />
                 </Grid>
             </TabItem>
             <TabItem Header="Пользователи" Width="140">
@@ -66,6 +67,7 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                     </ListBox>
+                    <Button Content="УДАЛИТЬ ПОЛЬЗОВАТЕЛЯ" HorizontalAlignment="Left" Margin="404,952,0,0" VerticalAlignment="Top" Height="75" Width="360" FontSize="25" Background="Red" BorderBrush="Black"  Cursor="Hand" Click="Button_Click_2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Блюда" Width="140">
