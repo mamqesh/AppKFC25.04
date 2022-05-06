@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AppKFC.Database;
-
+using System.IO;
 
 namespace AppKFC.Pages
 {
@@ -24,15 +24,51 @@ namespace AppKFC.Pages
     {
         //FastFoodEntities connection = new FastFoodEntities();
         danilEntities connection = new danilEntities();
-
+        private string code = "";
+        private double blockTime = 0;
+        private int blockInterval = 60000;
+        private int failCounter = 0;
+        private const string filename = "data.lock";
         public registrationPage()
         {
             InitializeComponent();
             //CountRole();
             textBoxLogin.ToolTip = "Введите ваш логин";
             passwordBoxPassword.ToolTip = "Введите ваш пароль";
+            GenerateCode();
+#if DEBUG
+            textBoxLogin.Text = "9632551263";
+            passwordBoxPassword.Password = "zxc(1000-7)";
+            textBoxCode.Text = code;
+#endif
         }
 
+        void GenerateCode()//СОЗДАНИЕ КАПЧИ
+        {
+            code = "";
+            string chars = "QWERTYUIOPASDFGHJKLZXCVBNM0123456789!@#$%^&*";//ВСЕ СИМВОЛЫ
+            Random random = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < 6; i++)
+            {
+                int a = random.Next(0, 10);
+                code += chars.Substring(a, 1);
+            }
+            labelCode.Content = code;
+        }
+        void WriteBlocking()
+        {
+
+        }
+        void OnLogin()
+        {
+            if (failCounter>=3)
+            {
+
+                MessageBox.Show("Вход заблокирован на одну минуту");
+                failCounter = 0;
+                return;
+            }
+        }
         //void CountRole()
         //{
         //    var countAccount = connection.Employee.Where(e => e.Role == 3).Count();
@@ -41,7 +77,6 @@ namespace AppKFC.Pages
         //        NavigationService.Navigate(MainWindow.pageRegistrationEmployee);
         //    }
         //}
-
 
         private void Button_Click(object sender, RoutedEventArgs e) //ВХОД В УЧЕТКУ
         {
@@ -55,15 +90,27 @@ namespace AppKFC.Pages
                 {
                     if (password == _employees.Password)
                     {
-                        if (_employees.Role == 2)
+                        if (textBoxCode.Text==code)
                         {
-                            NavigationService.Navigate(MainWindow.pageMainPage);
-                            tryExit++;
+                            if (_employees.Role == 2)
+                            {
+                                NavigationService.Navigate(MainWindow.pageMainPage);
+                                tryExit++;
+                            }
+                            if (_employees.Role == 3)
+                            {
+                                NavigationService.Navigate(MainWindow.pageRegistrationEmployee);
+                                tryExit++;
+                            }
                         }
-                        if (_employees.Role == 3)
+                        else
                         {
-                            NavigationService.Navigate(MainWindow.pageRegistrationEmployee);
-                            tryExit++;
+                            textBoxLogin.Clear();
+                            passwordBoxPassword.Clear();
+                            MessageBox.Show("Неверный код проверки");
+                            GenerateCode();
+                            failCounter++;
+                            return;
                         }
                     }
                 }
@@ -73,6 +120,8 @@ namespace AppKFC.Pages
                 textBoxLogin.Clear();
                 passwordBoxPassword.Clear();
                 MessageBox.Show("Данная учетная запись не найдена");
+                GenerateCode();
+                failCounter++;
             }
         }
 
